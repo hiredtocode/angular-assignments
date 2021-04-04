@@ -1,0 +1,4 @@
+<p>event-binding works!</p>
+<input #myTitle (keyup.enter)="onClicked(myTitle.value)" />
+<button (click)="onClicked(myTitle.value)">Click Me</button>
+<h2>{{ message }}</h2>
