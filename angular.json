@@ -121,6 +121,238 @@
           }
         }
       }
+    },
+    "two-way-binding": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/two-way-binding",
+      "sourceRoot": "projects/two-way-binding/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/two-way-binding",
+            "index": "projects/two-way-binding/src/index.html",
+            "main": "projects/two-way-binding/src/main.ts",
+            "polyfills": "projects/two-way-binding/src/polyfills.ts",
+            "tsConfig": "projects/two-way-binding/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/two-way-binding/src/favicon.ico",
+              "projects/two-way-binding/src/assets"
+            ],
+            "styles": [
+              "projects/two-way-binding/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/two-way-binding/src/environments/environment.ts",
+                  "with": "projects/two-way-binding/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "two-way-binding:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "two-way-binding:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "two-way-binding:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/two-way-binding/src/test.ts",
+            "polyfills": "projects/two-way-binding/src/polyfills.ts",
+            "tsConfig": "projects/two-way-binding/tsconfig.spec.json",
+            "karmaConfig": "projects/two-way-binding/karma.conf.js",
+            "assets": [
+              "projects/two-way-binding/src/favicon.ico",
+              "projects/two-way-binding/src/assets"
+            ],
+            "styles": [
+              "projects/two-way-binding/src/styles.css"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/two-way-binding/tsconfig.app.json",
+              "projects/two-way-binding/tsconfig.spec.json",
+              "projects/two-way-binding/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/two-way-binding/e2e/protractor.conf.js",
+            "devServerTarget": "two-way-binding:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "two-way-binding:serve:production"
+            }
+          }
+        }
+      }
+    },
+    "transform-data-pipes": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/transform-data-pipes",
+      "sourceRoot": "projects/transform-data-pipes/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/transform-data-pipes",
+            "index": "projects/transform-data-pipes/src/index.html",
+            "main": "projects/transform-data-pipes/src/main.ts",
+            "polyfills": "projects/transform-data-pipes/src/polyfills.ts",
+            "tsConfig": "projects/transform-data-pipes/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/transform-data-pipes/src/favicon.ico",
+              "projects/transform-data-pipes/src/assets"
+            ],
+            "styles": [
+              "projects/transform-data-pipes/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/transform-data-pipes/src/environments/environment.ts",
+                  "with": "projects/transform-data-pipes/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "transform-data-pipes:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "transform-data-pipes:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "transform-data-pipes:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/transform-data-pipes/src/test.ts",
+            "polyfills": "projects/transform-data-pipes/src/polyfills.ts",
+            "tsConfig": "projects/transform-data-pipes/tsconfig.spec.json",
+            "karmaConfig": "projects/transform-data-pipes/karma.conf.js",
+            "assets": [
+              "projects/transform-data-pipes/src/favicon.ico",
+              "projects/transform-data-pipes/src/assets"
+            ],
+            "styles": [
+              "projects/transform-data-pipes/src/styles.css"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/transform-data-pipes/tsconfig.app.json",
+              "projects/transform-data-pipes/tsconfig.spec.json",
+              "projects/transform-data-pipes/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/transform-data-pipes/e2e/protractor.conf.js",
+            "devServerTarget": "transform-data-pipes:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "transform-data-pipes:serve:production"
+            }
+          }
+        }
+      }
     }
   },
   "defaultProject": "event-binding"
