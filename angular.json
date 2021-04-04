@@ -26,9 +26,7 @@
               "projects/event-binding/src/favicon.ico",
               "projects/event-binding/src/assets"
             ],
-            "styles": [
-              "projects/event-binding/src/styles.css"
-            ],
+            "styles": ["projects/event-binding/src/styles.css"],
             "scripts": []
           },
           "configurations": {
@@ -89,9 +87,7 @@
               "projects/event-binding/src/favicon.ico",
               "projects/event-binding/src/assets"
             ],
-            "styles": [
-              "projects/event-binding/src/styles.css"
-            ],
+            "styles": ["projects/event-binding/src/styles.css"],
             "scripts": []
           }
         },
@@ -103,9 +99,7 @@
               "projects/event-binding/tsconfig.spec.json",
               "projects/event-binding/e2e/tsconfig.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {
@@ -124,7 +118,11 @@
     },
     "two-way-binding": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "skipTests": true
+        }
+      },
       "root": "projects/two-way-binding",
       "sourceRoot": "projects/two-way-binding/src",
       "prefix": "app",
@@ -142,9 +140,7 @@
               "projects/two-way-binding/src/favicon.ico",
               "projects/two-way-binding/src/assets"
             ],
-            "styles": [
-              "projects/two-way-binding/src/styles.css"
-            ],
+            "styles": ["projects/two-way-binding/src/styles.css"],
             "scripts": []
           },
           "configurations": {
@@ -205,9 +201,7 @@
               "projects/two-way-binding/src/favicon.ico",
               "projects/two-way-binding/src/assets"
             ],
-            "styles": [
-              "projects/two-way-binding/src/styles.css"
-            ],
+            "styles": ["projects/two-way-binding/src/styles.css"],
             "scripts": []
           }
         },
@@ -219,9 +213,7 @@
               "projects/two-way-binding/tsconfig.spec.json",
               "projects/two-way-binding/e2e/tsconfig.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {
@@ -258,9 +250,7 @@
               "projects/transform-data-pipes/src/favicon.ico",
               "projects/transform-data-pipes/src/assets"
             ],
-            "styles": [
-              "projects/transform-data-pipes/src/styles.css"
-            ],
+            "styles": ["projects/transform-data-pipes/src/styles.css"],
             "scripts": []
           },
           "configurations": {
@@ -321,9 +311,7 @@
               "projects/transform-data-pipes/src/favicon.ico",
               "projects/transform-data-pipes/src/assets"
             ],
-            "styles": [
-              "projects/transform-data-pipes/src/styles.css"
-            ],
+            "styles": ["projects/transform-data-pipes/src/styles.css"],
             "scripts": []
           }
         },
@@ -335,9 +323,7 @@
               "projects/transform-data-pipes/tsconfig.spec.json",
               "projects/transform-data-pipes/e2e/tsconfig.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {
