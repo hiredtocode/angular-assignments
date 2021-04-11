@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CounterService } from '../counter.service';
 import { StatusService } from '../status.service';
 
 @Component({
@@ -6,8 +7,7 @@ import { StatusService } from '../status.service';
   template: `<h3>Inactive Users</h3>
     <ul class="list-group">
       <li class="list-group-item" *ngFor="let user of users; let i = index">
-        {{ user }} |
-        <a href="#" (click)="onSetToActive(i)">Set to Active</a>
+        {{ user }} | <a href="#" (click)="onSetToActive(i)">Set to Active</a>
       </li>
     </ul> `,
 })
