@@ -140,7 +140,10 @@
               "projects/two-way-binding/src/favicon.ico",
               "projects/two-way-binding/src/assets"
             ],
-            "styles": ["projects/two-way-binding/src/styles.css"],
+            "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "projects/two-way-binding/src/styles.css"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -360,9 +363,7 @@
               "projects/services-assignment/src/favicon.ico",
               "projects/services-assignment/src/assets"
             ],
-            "styles": [
-              "projects/services-assignment/src/styles.css"
-            ],
+            "styles": ["projects/services-assignment/src/styles.css"],
             "scripts": []
           },
           "configurations": {
@@ -423,9 +424,7 @@
               "projects/services-assignment/src/favicon.ico",
               "projects/services-assignment/src/assets"
             ],
-            "styles": [
-              "projects/services-assignment/src/styles.css"
-            ],
+            "styles": ["projects/services-assignment/src/styles.css"],
             "scripts": []
           }
         },
@@ -437,9 +436,7 @@
               "projects/services-assignment/tsconfig.spec.json",
               "projects/services-assignment/e2e/tsconfig.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {
