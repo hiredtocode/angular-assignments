@@ -339,6 +339,122 @@
           }
         }
       }
+    },
+    "services-assignment": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/services-assignment",
+      "sourceRoot": "projects/services-assignment/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/services-assignment",
+            "index": "projects/services-assignment/src/index.html",
+            "main": "projects/services-assignment/src/main.ts",
+            "polyfills": "projects/services-assignment/src/polyfills.ts",
+            "tsConfig": "projects/services-assignment/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/services-assignment/src/favicon.ico",
+              "projects/services-assignment/src/assets"
+            ],
+            "styles": [
+              "projects/services-assignment/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/services-assignment/src/environments/environment.ts",
+                  "with": "projects/services-assignment/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "services-assignment:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "services-assignment:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "services-assignment:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/services-assignment/src/test.ts",
+            "polyfills": "projects/services-assignment/src/polyfills.ts",
+            "tsConfig": "projects/services-assignment/tsconfig.spec.json",
+            "karmaConfig": "projects/services-assignment/karma.conf.js",
+            "assets": [
+              "projects/services-assignment/src/favicon.ico",
+              "projects/services-assignment/src/assets"
+            ],
+            "styles": [
+              "projects/services-assignment/src/styles.css"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/services-assignment/tsconfig.app.json",
+              "projects/services-assignment/tsconfig.spec.json",
+              "projects/services-assignment/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/services-assignment/e2e/protractor.conf.js",
+            "devServerTarget": "services-assignment:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "services-assignment:serve:production"
+            }
+          }
+        }
+      }
     }
   },
   "defaultProject": "event-binding"
