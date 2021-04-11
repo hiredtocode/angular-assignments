@@ -42,3 +42,14 @@ ng serve --project="(app-name)"
 ```terminal
 ng build --prod --project="(app-name)"
 ```
+
+### How to create new multi app repo
+
+#### Create the Empty Workspace
+
+```terminal
+ng new MultipleApps --createApplication="false"
+cd MultipleApps
+```
+
+The above command creates folder with the name MultipleApps and configures the workspace. It does not create any apps.
