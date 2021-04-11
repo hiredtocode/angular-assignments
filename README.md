@@ -53,3 +53,16 @@ ng serve --project="(app-name)"
 ```terminal
 ng build --prod --project="(app-name)"
 ```
+
+## Generate modules and components using the CLI
+
+```terminal
+ng g c my-component--project=my-project1
+
+
+```
+
+```terminal
+ng g module my-module --project=my-project1
+
+```
