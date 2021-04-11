@@ -57,12 +57,12 @@ ng build --prod --project="(app-name)"
 ## Generate modules and components using the CLI
 
 ```terminal
-ng g c my-component--project=my-project1
+ng g c my-component-name --project=my-project-name
 
 
 ```
 
 ```terminal
-ng g module my-module --project=my-project1
+ng g module my-module-name --project=my-project-name
 
 ```
