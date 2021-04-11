@@ -17,7 +17,7 @@ export class InactiveUsersComponent implements OnInit {
   constructor(private statusService: StatusService) {}
 
   ngOnInit() {
-    this.users = this.statusService.activeUsers;
+    this.users = this.statusService.inactiveUsers;
   }
 
   onSetToActive(id: number) {
